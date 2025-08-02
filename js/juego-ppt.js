@@ -19,9 +19,6 @@ function getHumanChoice() {
     return eleccionJugador.toLowerCase()
 }
 
-
-// const computerSelection = getComputerChoice();
-
 // Funcion para jugar todo el juego
 function playGame() {
     // Control de Punteos
