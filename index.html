@@ -4,10 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego JS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/juego-ppt.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
 </head>
 <body>
-    <h1>Juego Piedra Papel o Tijeras</h1>
+    <main class="contenedorMain">
+        <header class="contenedorPunteo">
+            <div class="marcadorJugador">
+                <p>Nombre <span>Punteo</span></p>
+            </div>
+            <div class="marcadorCompu">
+                <p>Computadora <span>Punteo</span></p>
+            </div>
+        </header>
 
-    <script src="js/juego-ppt.js"></script>
+        <div class="contenedorJuego">
+            <section class="contenedorJugador">
+                <div class="contenedorRound">
+                    <p>Ganaste este Round</p>
+                </div>
+
+                <div class="contenedorImagen">
+                    <img src="/img/jugador (2).png" alt="imagen del juador">
+                </div>
+
+                <div class="contenedorBotones">
+                    <div class="btn piedra">
+                        <i class="hgi hgi-stroke hgi-punch"></i>
+                    </div>
+                    <div class="btn papel">
+                        <i class="hgi hgi-stroke hgi-hold-01"></i>
+                    </div>
+                    <div class="btn tijera">
+                        <i class="hgi hgi-stroke hgi-victory-finger-03"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contenedorPartida">
+                <p>Inicio de Partida</p>
+                <div class="partida">
+                    <div class="eleccionJugador">
+                        <i class="hgi hgi-stroke hgi-punch"></i>
+                    </div>
+                    <span>VS</span>
+                    <div class="eleccionCompu">
+                        <i class="hgi hgi-stroke hgi-victory-finger-03"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contenedorCompu">
+                <div class="contenedorRound">
+                    <p>Ganaste este Round</p>
+                </div>
+
+                <div class="contenedorImagen">
+                    <img src="/img/robot.png" alt="imagen de la computadora">
+                </div>
+
+                <div class="contenedorBotones">
+                    <div class="btn piedra">
+                        <i class="hgi hgi-stroke hgi-punch"></i>
+                    </div>
+                    <div class="btn papel">
+                        <i class="hgi hgi-stroke hgi-hold-01"></i>
+                    </div>
+                    <div class="btn tijera">
+                        <i class="hgi hgi-stroke hgi-victory-finger-03"></i>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
 </html>

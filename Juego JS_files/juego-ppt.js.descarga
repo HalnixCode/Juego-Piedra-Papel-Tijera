@@ -14,10 +14,10 @@ function getComputerChoice() {
 
 
 // Obtener la eleccion del jugador 
-// function getHumanChoice() {
-//     let eleccionJugador = prompt('Escriba su Eleccion \nPiedra🛢 \nPapel📝 \nTijera ✂')
-//     return eleccionJugador.toLowerCase()
-// }
+function getHumanChoice() {
+    let eleccionJugador = prompt('Escriba su Eleccion \nPiedra🛢 \nPapel📝 \nTijera ✂')
+    return eleccionJugador.toLowerCase()
+}
 
 // Funcion para jugar todo el juego
 function playGame() {
