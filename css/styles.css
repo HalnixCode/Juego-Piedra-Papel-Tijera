@@ -5,18 +5,8 @@
 }
 
 @font-face {
-    font-family: 'karma future';
-    src: url(../fuentes/KarmaFuture.ttf);
-}
-
-@font-face {
     font-family: 'ka1';
     src: url(../fuentes/ka1.ttf);
-}
-
-@font-face {
-    font-family: 'blox2';
-    src: url(../fuentes/Blox2.ttf);
 }
 
 body {
@@ -49,13 +39,18 @@ body {
     border-radius: 10px;
 }
 
-.marcadorJugador p,
-.marcadorCompu p {
-    display: inline-block;
-}
-
 .marcadorCompu p {
     text-align: end;
+}
+
+.puntajeJugador {
+    color: #FFEE8C;
+    margin-left: 15px;
+}
+
+.puntajeBot {
+    color: #FFEE8C;
+    margin-right: 15px;
 }
 
 .contenedorJuego {
@@ -74,6 +69,18 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.ganadorRound {
+    font-family: 'ka1';
+    font-size: 30px;
+    color: #92FD70;
+    position: absolute;
+    width: 300px;
+    top: -70px;
+    left: -30px;
+    text-align: center;
 }
 
 .contenedorImagen img {
@@ -95,32 +102,117 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 .btn i {
     font-size: 45px;
 }
 
-.btn:hover {
+.btn:disabled {
+    cursor: not-allowed;
+    background-color: #0A0A0A;
+    color: #FBF9E4;
+    opacity: 0.7;
+}
+
+.btn:not(:disabled) {
+    cursor: pointer;
+    background-color: #0A0A0A;
+    color: #FBF9E4;
+}
+
+.btn:not(:disabled):hover {
     background-color: #FBF9E4;
     color: #0A0A0A;
+    transform: scale(1.2);
 }
 
 .contenedorPartida {
+    width: 325px;
+    position: relative;
+}
+
+.empate {
+    position: absolute;
+    top: -70px;
+    left: 88px;
+    margin-bottom: 20px;
+    font-family: 'ka1';
+    font-size: 30px;
+    color: #FFEE8C;
+}
+
+.mostrarMensaje {
+    text-align: center;
+    font-family: 'ka1';
+    font-size: 30px;
+    color: #92FD70;
+    position: relative;
+    top: -30px;
+    right: 138px;
+    width: 600px;
+}
+
+.colorVerde {
+    color: #92FD70;
+}
+
+.colorRojo {
+    color: #FF746C;
+}
+
+.colorAmarillo {
+    color: #FFEE8C;
+}
+
+.contenedorDuelo {
+    width: 100%;
     height: 200px;
-    width: 350px;
     border: 4px solid #FBF9E4;
     border-radius: 8px;
     text-align: center;
     padding: 15px;
 }
 
+.versus {
+    font-family: 'ka1';
+    font-size: 35px;
+}
+
 .partida {
-    height: 80%;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.contenedorIniciar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.btnPartida {
+    width: 250px;
+    font-size: 28px;
+    background-color: #FBF9E4;
+    font-family: 'ka1';
+    padding: 10px 0 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btnPartida:hover {
+    transform: scale(1.1) ;
+}
+
+.btnPartida:disabled {
+    transform: none;
+    background-color: #FBF9E4;
+    color: #0A0A0A;
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 .eleccionJugador i,

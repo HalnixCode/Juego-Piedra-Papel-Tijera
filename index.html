@@ -5,59 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego JS</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/juego-ppt.js" defer></script>
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
 </head>
 <body>
     <main class="contenedorMain">
         <header class="contenedorPunteo">
             <div class="marcadorJugador">
-                <p>Nombre <span>Punteo</span></p>
+                <p>
+                    <span id="nombre">Jugador</span> 
+                    <span class="puntajeJugador" id="puntajeJugador">0</span>
+                </p>
             </div>
             <div class="marcadorCompu">
-                <p>Computadora <span>Punteo</span></p>
+                <p>
+                    <span class="puntajeBot" id="putajeBot">0</span>
+                     Bot
+                </p>
             </div>
         </header>
 
         <div class="contenedorJuego">
             <section class="contenedorJugador">
                 <div class="contenedorRound">
-                    <p>Ganaste este Round</p>
+                    <p class="ganadorRound" id="roundJugador"></p>
                 </div>
 
                 <div class="contenedorImagen">
                     <img src="/img/jugador (2).png" alt="imagen del juador">
                 </div>
 
-                <div class="contenedorBotones">
-                    <div class="btn piedra">
+                <div class="contenedorBotones" id="botones">
+                    <button id="btn-piedra" class="btn piedra" disabled>
                         <i class="hgi hgi-stroke hgi-punch"></i>
-                    </div>
-                    <div class="btn papel">
+                    </button>
+                    <button id="btn-papel" class="btn papel" disabled>
                         <i class="hgi hgi-stroke hgi-hold-01"></i>
-                    </div>
-                    <div class="btn tijera">
+                    </button>
+                    <button id="btn-tijera" class="btn tijera" disabled>
                         <i class="hgi hgi-stroke hgi-victory-finger-03"></i>
-                    </div>
+                    </button>
                 </div>
             </section>
 
             <section class="contenedorPartida">
-                <p>Inicio de Partida</p>
-                <div class="partida">
-                    <div class="eleccionJugador">
-                        <i class="hgi hgi-stroke hgi-punch"></i>
+                <p class="empate" id="roundEmpate"></p>
+                <p class="mostrarMensaje" id="mostrarMensaje"></p>
+                <div class="contenedorDuelo">
+                    <div class="partida">
+                        <div class="eleccionJugador">
+                            <i id="iconoJugador"></i>
+                        </div>
+                        <span class="versus">VS</span>
+                        <div class="eleccionCompu">
+                            <i id="iconoComputador"></i>
+                        </div>
                     </div>
-                    <span>VS</span>
-                    <div class="eleccionCompu">
-                        <i class="hgi hgi-stroke hgi-victory-finger-03"></i>
-                    </div>
+                </div>
+
+                <div class="contenedorIniciar" >
+                    <button class="btnPartida" id="btnPartida">Iniciar Partida</button>
                 </div>
             </section>
 
             <section class="contenedorCompu">
+                <p class="ganadorRound" id="roundCompu"></p>
                 <div class="contenedorRound">
-                    <p>Ganaste este Round</p>
                 </div>
 
                 <div class="contenedorImagen">
@@ -65,18 +77,20 @@
                 </div>
 
                 <div class="contenedorBotones">
-                    <div class="btn piedra">
+                    <button class="btn" disabled>
                         <i class="hgi hgi-stroke hgi-punch"></i>
-                    </div>
-                    <div class="btn papel">
+                    </button>
+                    <button class="btn" disabled>
                         <i class="hgi hgi-stroke hgi-hold-01"></i>
-                    </div>
-                    <div class="btn tijera">
+                    </button>
+                    <button class="btn" disabled>
                         <i class="hgi hgi-stroke hgi-victory-finger-03"></i>
-                    </div>
+                    </button>
                 </div>
             </section>
         </div>
     </main>
+
+    <script src="js/juego-ppt.js"></script>
 </body>
 </html>
