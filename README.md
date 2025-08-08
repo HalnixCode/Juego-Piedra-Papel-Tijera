@@ -18,5 +18,5 @@ El objetivo principal fue poner en práctica **manipulación del DOM**, **evento
 
 ## 🖼 Vista previa
 
-<img src="./img/proyecto-img.png" alt="Vista previa del juego" width="500" style="max-width: 100%; height: auto;">
+<img src="/img/proyecto-img.png" alt="Vista previa del juego" width="500" style="max-width: 100%; height: auto;">
 
